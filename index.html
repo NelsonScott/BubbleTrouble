@@ -3,6 +3,7 @@
     <title>Bubble Trouble</title>
     <script src="lib/gameView.js"></script>
     <script src="lib/game.js"></script>
+    <script src="lib/movingObject.js"></script>
   </head>
   <body>
     <canvas id="myCanvas" width="300" height="300"></canvas>
@@ -11,6 +12,12 @@
   <script>
     (function(){
       var canvas = document.getElementById("myCanvas");
+      canvas.width = BubbleTrouble.Game.DIM_X;
+      canvas.height = BubbleTrouble.Game.DIM_Y;
+
+      var context = canvas.getContext("2d");
+      var game = new BubbleTrouble.Game(context);
+      new BubbleTrouble.GameView(game).start();
     })()
   </script>
 </html>
