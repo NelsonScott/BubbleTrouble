@@ -1,6 +1,8 @@
 <html>
   <head>
     <title>Bubble Trouble</title>
+    <link rel="stylesheet" type="text/css" href="CSS/bubbletrouble.css">
+    <link rel="stylesheet" type="text/css" href="CSS/menu.css">
     <script src="lib/util.js"></script>
     <script src="lib/gameView.js"></script>
     <script src="lib/game.js"></script>
@@ -8,20 +10,47 @@
     <script src="lib/bubble.js"></script>
     <script src="lib/mainChar.js"></script>
     <script src="lib/arrow.js"></script>
+    <audio controls loop autoplay hidden>
+      <source src="Sounds/dramaticMusic.mp3" type="audio/mpeg">
+    </audio>
   </head>
   <body>
-    <canvas id="myCanvas"></canvas>
+    <div class="menu">
+      <button class="start" onClick="startGame()">New Game</button>
+    </div>
+
+    <div id="container">
+      <div id="demoVideo">
+        <video width="1000" height="600" controls loop autoplay>
+          <source src="Video/demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
   </body>
 
   <script>
-    (function(){
-      var canvas = document.getElementById("myCanvas");
-      canvas.width = BubbleTrouble.Game.DIM_X;
-      canvas.height = BubbleTrouble.Game.DIM_Y;
+  function startGame (){
+    var parent = document.getElementById("container");
+    parent.removeChild(document.getElementById("demoVideo"));
 
-      var context = canvas.getContext("2d");
-      var game = new BubbleTrouble.Game(context);
-      new BubbleTrouble.GameView(game).start();
-    })()
+    var canvas = document.createElement("canvas");
+    parent.appendChild(canvas);
+    canvas.width = BubbleTrouble.Game.DIM_X;
+    canvas.height = BubbleTrouble.Game.DIM_Y;
+
+    var context = canvas.getContext("2d");
+    var game = new BubbleTrouble.Game(context);
+    new BubbleTrouble.GameView(game).start();
+  }
+    // (function(){
+    //   var canvas = document.getElementById("myCanvas");
+    //   canvas.width = BubbleTrouble.Game.DIM_X;
+    //   canvas.height = BubbleTrouble.Game.DIM_Y;
+    //
+    //   var context = canvas.getContext("2d");
+    //   var game = new BubbleTrouble.Game(context);
+    //   new BubbleTrouble.GameView(game).start();
+    // })()
   </script>
 </html>
