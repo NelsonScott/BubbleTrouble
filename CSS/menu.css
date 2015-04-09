@@ -1,9 +1,22 @@
-.menu {
+#menu {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 25%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 100;
+}
+
+#menu button{
+  color: gold;
+  display: block;
+  font-family: Apple Chancery, "MS Trebuchet", sans-serif;
+  font-size: 30;
+  background:none;
+  border: none;
+}
+
+#menu button:hover{
+  cursor: pointer;
 }

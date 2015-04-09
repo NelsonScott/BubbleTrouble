@@ -15,17 +15,23 @@
     </audio>
   </head>
   <body>
-
+    <div class="controls-text">
+      <p> Controls</p>
+      <p> Move with the arrow keys or 'a' and 'd'.</p>
+      <p> Shoot your harpoon with the spacebar.</p>
+    </div>
+    
     <div id="container">
-    <div class="menu">
+    <div id="menu">
       <button class="start" onClick="startGame()">New Game</button>
     </div>
-      <div id="demoVideo">
-        <video width="1000" height="600" controls loop autoplay>
-          <source src="Video/demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+
+    <div id="demoVideo">
+      <video width="1000" height="600" controls loop autoplay>
+        <source src="Video/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
     </div>
   </body>
 
@@ -33,6 +39,7 @@
   function startGame (){
     var parent = document.getElementById("container");
     parent.removeChild(document.getElementById("demoVideo"));
+    document.getElementById("menu").style.display = 'none';
 
     var canvas = document.createElement("canvas");
     parent.appendChild(canvas);
@@ -43,14 +50,5 @@
     var game = new BubbleTrouble.Game(context);
     new BubbleTrouble.GameView(game).start();
   }
-    // (function(){
-    //   var canvas = document.getElementById("myCanvas");
-    //   canvas.width = BubbleTrouble.Game.DIM_X;
-    //   canvas.height = BubbleTrouble.Game.DIM_Y;
-    //
-    //   var context = canvas.getContext("2d");
-    //   var game = new BubbleTrouble.Game(context);
-    //   new BubbleTrouble.GameView(game).start();
-    // })()
   </script>
 </html>

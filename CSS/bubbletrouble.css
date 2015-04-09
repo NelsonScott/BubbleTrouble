@@ -3,8 +3,15 @@ body {
 }
 
 #container{
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 5px;
     width: 1000px;
+}
+
+.controls-text{
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
 }
