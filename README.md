@@ -14,4 +14,3 @@ BubbleTrouble is a clone of the classic flash game.  The goal is to pop the bubb
 ## TODO
 * Add Different Backgrounds/levels
 * Limit Harpoons
-* Add sound effects
