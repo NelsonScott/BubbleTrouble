@@ -9,12 +9,15 @@
 }
 
 .menu button{
+  background-color: rgba(41, 41, 41, 0.75);
   color: gold;
   display: block;
   font-family: Apple Chancery, "MS Trebuchet", sans-serif;
   font-size: 30;
-  background:none;
-  border: none;
+  /*background:none;*/
+  /*border: none;*/
+  moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
   outline: none;
 }
 
