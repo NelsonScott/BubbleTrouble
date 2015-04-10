@@ -49,7 +49,6 @@
     $("#container").append(canvas);
     canvas.width = BubbleTrouble.Game.DIM_X;
     canvas.height = BubbleTrouble.Game.DIM_Y;
-
     var context = canvas.getContext("2d");
     var game = new BubbleTrouble.Game(context);
     new BubbleTrouble.GameView(game).start();
