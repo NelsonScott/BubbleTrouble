@@ -22,14 +22,14 @@
     </div>
 
     <div id="container">
-      <div id="start-menu">
+      <div class="gamestart menu">
         <button class="start" onClick="startGame()">New Game</button>
       </div>
-      <div id="gameover-menu">
+      <div class="gameover menu">
         <button class="restart">Play Again?</button>
       </div>
 
-      <div id="demoVideo">
+      <div class="demoVideo">
         <video width="1000" height="600" controls loop autoplay>
           <source src="Video/demo.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -39,13 +39,14 @@
   </body>
 
   <script>
+  $(".gameover").hide();
+
   function startGame (){
-    var parent = document.getElementById("container");
-    parent.removeChild(document.getElementById("demoVideo"));
-    document.getElementById("start-menu").style.display = 'none';
+    $(".gamestart").hide();
+    $(".demoVideo").remove();
 
     var canvas = document.createElement("canvas");
-    parent.appendChild(canvas);
+    $("#container").append(canvas);
     canvas.width = BubbleTrouble.Game.DIM_X;
     canvas.height = BubbleTrouble.Game.DIM_Y;
 
