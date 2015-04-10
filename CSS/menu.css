@@ -1,4 +1,4 @@
-#menu {
+#start-menu {
   position: absolute;
   left: 50%;
   top: 25%;
@@ -8,7 +8,7 @@
   z-index: 100;
 }
 
-#menu button{
+#start-menu button{
   color: gold;
   display: block;
   font-family: Apple Chancery, "MS Trebuchet", sans-serif;
@@ -17,6 +17,30 @@
   border: none;
 }
 
-#menu button:hover{
+#start-menu button:hover{
+  cursor: pointer;
+}
+
+#gameover-menu{
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#gameover-menu button{
+  color: gold;
+  display: block;
+  font-family: Apple Chancery, "MS Trebuchet", sans-serif;
+  font-size: 30;
+  background:none;
+  border: none;
+}
+
+#gameover-menu button:hover{
   cursor: pointer;
 }
