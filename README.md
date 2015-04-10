@@ -8,6 +8,7 @@ BubbleTrouble is a clone of the classic flash game.  The goal is to pop the bubb
 ## Built With
 
 * Javascript
+* jQuery
 * HTML5 Canvas
 * CSS
 
