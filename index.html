@@ -47,6 +47,7 @@
 
     var context = canvas.getContext("2d");
     var game = new BubbleTrouble.Game(context);
+    BubbleTrouble.Sounds.startSound.play();
     new BubbleTrouble.GameView(game).start();
   }
   </script>
