@@ -1,14 +1,14 @@
 .menu {
   position: absolute;
   left: 50%;
-  top: 25%;
+  top: 38%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 100;
 }
 
-.menu button{
+.menu button {
   background-color: rgba(41, 41, 41, 0.75);
   color: gold;
   display: block;
