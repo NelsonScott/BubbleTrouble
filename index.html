@@ -30,11 +30,8 @@
         <button class="restart">Play Again?</button>
       </div>
 
-      <div class="demoVideo">
-        <video width="1000" height="600" controls loop autoplay>
-          <source src="Video/demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div class="previewImg">
+        <img src="Images/preview.png" alt="placeholder">
       </div>
     </div>
   </body>
@@ -44,7 +41,7 @@
 
   function startGame (){
     $(".gamestart").hide();
-    $(".demoVideo").remove();
+    $(".previewImg").remove();
 
     var canvas = document.createElement("canvas");
     $("#container").append(canvas);
